@@ -10,4 +10,4 @@ jobs:
       - name: Run my shared GitHub action
         uses: UpsideDownST/cyber-bootstrap/.github/cyber-hardening@main
         with:
-          message: "Running from another repository!"
+          aws_credentials: ${{ secrets.AWS }}   # <- ORG SECRET USED HERE
