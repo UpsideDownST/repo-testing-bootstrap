@@ -16,7 +16,7 @@ jobs:
   harden:
     runs-on: ubuntu-latest
     steps:
-      - uses: UpsideDownST/cyber-bootstrap/.github/cyber-hardening@main
+      - uses: UpsideDownST/cyber-bootstrap@main
         with:
           aws_credentials: ${{ secrets.AWS }}
           # run_stepsecurity: "true"
