@@ -16,6 +16,8 @@ jobs:
   harden:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+    
       - uses: UpsideDownST/cyber-bootstrap@main
         with:
           aws_credentials: ${{ secrets.AWS }}
