@@ -1,0 +1,13 @@
+name: Test Simple Action
+on: workflow_dispatch
+
+jobs:
+  run-shared:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run my shared GitHub action
+        uses: UpsideDownST/cyber-bootstrap/.github/cyber-hardening@main
+        with:
+          message: "Running from another repository!"
