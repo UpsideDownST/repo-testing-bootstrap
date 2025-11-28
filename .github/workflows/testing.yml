@@ -1,13 +1,21 @@
 name: Test Simple Action
 on: workflow_dispatch
 
+# jobs:
+#   run-shared:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+
+#       - name: Run my shared GitHub action
+#         uses: UpsideDownST/cyber-bootstrap/.github/cyber-hardening@main
+#         with:
+#           aws_credentials: ${{ secrets.AWS }}   # <- ORG SECRET USED HERE
+
 jobs:
-  run-shared:
+  harden:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Run my shared GitHub action
-        uses: UpsideDownST/cyber-bootstrap/.github/cyber-hardening@main
+      - uses: UpsideDownST/cyber-bootstrap/.github/cyber-hardening@main
         with:
-          aws_credentials: ${{ secrets.AWS }}   # <- ORG SECRET USED HERE
+          aws_credentials: ${{ secrets.AWS }}
