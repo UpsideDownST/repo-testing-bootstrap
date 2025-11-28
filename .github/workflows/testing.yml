@@ -19,3 +19,5 @@ jobs:
       - uses: UpsideDownST/cyber-bootstrap/.github/cyber-hardening@main
         with:
           aws_credentials: ${{ secrets.AWS }}
+          # run_stepsecurity: "true"
+          run_canary: "true"
